@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .pearl-gradient {
+      background: linear-gradient(135deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+    }
+    .navbar-container {
+      width: 95%;
+      margin: 0 auto;
+    }
+    .navbar-scroll {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.95);
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .mobile-menu.active {
+      right: 0;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="navbar-container py-4">
+      <div class="bg-transparent transition-all duration-300 flex items-center justify-between p-4 rounded-lg">
+        <div class="text-2xl font-bold text-white">
+          <span>Hridyam Inc.</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-white hover:text-indigo-200 transition duration-300">Home</a>
+          <a href="#solutions" class="text-white hover:text-indigo-200 transition duration-300">Solutions</a>
+          <a href="#about" class="text-white hover:text-indigo-200 transition duration-300">About</a>
+          <a href="#contact" class="text-white hover:text-indigo-200 transition duration-300">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white hover:text-indigo-200 focus:outline-none">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="p-4">
+      <button id="close-menu-button" class="text-indigo-600 hover:text-indigo-800 focus:outline-none float-right">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-4 p-4 mt-8 text-center">
+      <a href="#home" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-bold text-xl">Home</a>
+      <a href="#solutions" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-bold text-xl">Solutions</a>
+      <a href="#about" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-bold text-xl">About</a>
+      <a href="#contact" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-bold text-xl">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="hero h-screen flex items-center justify-center parallax">
+      <div class="text-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-5">Transform Your Business</h1>
+        <p class="text-lg md:text-xl mb-7 max-w-2xl mx-auto">
+          We are pioneering the future of business technology. Specializing in advanced AI, machine learning, CRM, and data management solutions tailored for a wide range of industries.
+        </p>
+        <a href="#solutions" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300 inline-block">Explore Solutions</a>
+      </div>
+    </section>
+
+    <section id="solutions" class="py-20 bg-gradient-to-br from-blue-100 to-purple-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-semibold mb-12 text-center text-black drop-shadow-lg">Our Comprehensive Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-indigo-500 mb-4">
+              <i class="fas fa-brain text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">AI-Powered Analytics</h3>
+            <p class="text-gray-600">Harness the power of AI to gain actionable insights from your data, driving informed decision-making across your organization.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Industry Experience:</h4>
+              <ul class="list-disc list-inside">
+                <li>Finance</li>
+                <li>Healthcare</li>
+                <li>Pharma</li>
+                <li>Insurance</li>
+                <li>Legal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-green-500 mb-4">
+              <i class="fas fa-cloud text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">End-to-End Cloud Solutions</h3>
+            <p class="text-gray-600">Scalable and secure cloud solutions to optimize your operations and enhance collaboration.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Ready-to-use Solutions for:</h4>
+              <ul class="list-disc list-inside grid grid-cols-2 gap-2">
+                <li>HR</li>
+                <li>Finance</li>
+                <li>Insurance</li>
+                <li>Legal</li>
+                <li>Training</li>
+                <li>Healthcare</li>
+                <li>Pharma</li>
+                <li>Life Sciences</li>
+                <li>Security</li>
+                <li>Compliance</li>
+                <li>Call Center</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-blue-500 mb-4">
+              <i class="fas fa-users text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">Customer Relationship Management Consulting</h3>
+            <p class="text-gray-600">Integrate data-driven CRM software to revolutionize your customer interactions and boost business growth.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Our CRM Integration Services:</h4>
+              <ul class="list-disc list-inside">
+                <li>Salesforce implementation and customization</li>
+                <li>SAP CRM solutions tailored to your needs</li>
+                <li>Data migration and integration</li>
+                <li>CRM strategy development</li>
+                <li>User training and adoption support</li>
+                <li>Ongoing maintenance and optimization</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-yellow-500 mb-4">
+              <i class="fas fa-mobile-alt text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">Mobile & Web Applications</h3>
+            <p class="text-gray-600">Cutting-edge mobile and web applications that keep your business connected and productive on-the-go.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Example Applications:</h4>
+              <ul class="list-disc list-inside grid grid-cols-2 gap-2">
+                <li>Mobile banking</li>
+                <li>Patient management</li>
+                <li>Drug trial data collection</li>
+                <li>Claims processing</li>
+                <li>Case management</li>
+                <li>Telemedicine</li>
+                <li>Risk assessment</li>
+                <li>Compliance tracking</li>
+                <li>Document management</li>
+                <li>Inventory control</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-red-500 mb-4">
+              <i class="fas fa-shield-alt text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">Cybersecurity & Compliance</h3>
+            <p class="text-gray-600">Robust security measures to protect your valuable data and maintain customer trust.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Our Services:</h4>
+              <ul class="list-disc list-inside">
+                <li>Cyber Security Program Setup</li>
+                <li>Corporate Risk Management</li>
+                <li>Infrastructure and Cloud Security</li>
+                <li>Advanced Identity Management</li>
+                <li>Device Management</li>
+                <li>Vendor Risk Assessment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-cogs text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">Process Automation</h3>
+            <p class="text-gray-600">Streamline your operations with intelligent automation, reducing costs and improving efficiency.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Our Capabilities:</h4>
+              <ul class="list-disc list-inside">
+                <li>Secure Integrations</li>
+                <li>Data Pipeline Operations</li>
+                <li>AI Application Integrations</li>
+                <li>Industry-Specific Solutions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+            <div class="text-pink-500 mb-4">
+              <i class="fas fa-database text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-medium mb-4 text-gray-800">Advanced Data Management</h3>
+            <p class="text-gray-600">Leverage our expertise in advanced data management to securely manage your data anywhere.</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h4 class="font-semibold mb-2">Key Features:</h4>
+              <ul class="list-disc list-inside">
+                <li>Secure Data Storage</li>
+                <li>Real-time Data Processing</li>
+                <li>Advanced Analytics</li>
+                <li>Data Visualization</li>
+                <li>Scalable Architecture</li>
+                <li>Compliance Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 p-6 rounded-xl bg-white bg-opacity-75">
+          <h3 class="text-2xl font-semibold mb-6 text-center">Ready-to-use Solutions for Various Industries</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="bg-blue-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-user-tie mr-2 text-blue-500"></i>
+              <span>HR</span>
+            </div>
+            <div class="bg-green-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-chart-line mr-2 text-green-500"></i>
+              <span>Finance</span>
+            </div>
+            <div class="bg-yellow-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+              <span>Insurance</span>
+            </div>
+            <div class="bg-purple-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-balance-scale mr-2 text-purple-500"></i>
+              <span>Legal</span>
+            </div>
+            <div class="bg-red-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-graduation-cap mr-2 text-red-500"></i>
+              <span>Training</span>
+            </div>
+            <div class="bg-indigo-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-heartbeat mr-2 text-indigo-500"></i>
+              <span>Healthcare</span>
+            </div>
+            <div class="bg-pink-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-pills mr-2 text-pink-500"></i>
+              <span>Pharma</span>
+            </div>
+            <div class="bg-teal-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-dna mr-2 text-teal-500"></i>
+              <span>Life Sciences</span>
+            </div>
+            <div class="bg-orange-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-lock mr-2 text-orange-500"></i>
+              <span>Security</span>
+            </div>
+            <div class="bg-gray-200 p-3 rounded-lg flex items-center">
+              <i class="fas fa-check-circle mr-2 text-gray-600"></i>
+              <span class="text-black">Compliance</span>
+            </div>
+            <div class="bg-cyan-100 p-3 rounded-lg flex items-center">
+              <i class="fas fa-headset mr-2 text-cyan-500"></i>
+              <span>Call Center</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gradient-to-l from-gray-800 to-indigo-900 text-white parallax">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl font-semibold mb-6">About Hridyam Inc.</h2>
+          <p class="text-xl mb-8">
+            At Hridyam Inc., we're committed to transforming businesses through innovative technology solutions. Our team of experts combines deep industry knowledge with cutting-edge AI and machine learning capabilities to deliver unparalleled results. We have built and delivered secure solutions and cloud-hosted services for various industry verticals, ensuring data security and worldwide compliance.
+          </p>
+          <a href="#contact" class="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 pearl-gradient">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-semibold mb-12 text-center text-black drop-shadow-lg">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4">
+            <div>
+              <h2 class="text-2xl font-semibold mb-4 text-indigo-600 text-center">Get in Touch</h2>
+              <ul class="space-y-2 text-center">
+                <li class="flex items-center justify-center">
+                  <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  <a href="mailto:contact@hridyam.com" class="text-indigo-600 hover:text-indigo-800">contact@hridyam.com</a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                  <a href="tel:+1234567890" class="text-indigo-600 hover:text-indigo-800">+1 (609) 222-4991</a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <span class="text-gray-700">New York, NY</span>
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <span class="text-gray-700">New Delhi, India</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <h2 class="text-2xl font-semibold mb-4 text-indigo-600 text-center">Business Hours</h2>
+              <ul class="space-y-2 text-gray-700 text-center">
+                <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                <li>Saturday-Sunday: 10:00 AM - 4:00 PM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4">
+            <form action="https://submit-form.com/ZmkmV85XI">
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Your Name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email"id="email" type="email" placeholder="Your Email">
+              </div>
+              <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                  Message
+                </label>
+                <textarea class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" id="message" placeholder="Your Message" rows="4"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-r from-gray-800 to-indigo-900 text-white py-8 rounded-t-lg">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-between items-center">
+        <div class="w-full md:w-1/3 text-center md:text-left">
+          <h3 class="text-lg font-semibold mb-2">Hridyam Inc.</h3>
+          <p class="text-sm">Empowering businesses with data-driven solutions</p>
+        </div>
+        <div class="w-full md:w-1/3 text-center mt-4 md:mt-0">
+          <ul class="inline-flex space-x-4">
+            <li><a href="#" class="hover:text-indigo-400 transition duration-300"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition duration-300"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/3 text-center md:text-right mt-4 md:mt-0">
+          <p>&copy; 2024 Hridyam Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('header');
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 0) {
+        header.querySelector('nav > div').classList.add('navbar-scroll');
+        header.querySelectorAll('a, span, button').forEach(function(element) {
+          element.classList.remove('text-white', 'hover:text-indigo-200');
+          element.classList.add('text-gray-700', 'hover:text-indigo-600');
+        });
+      } else {
+        header.querySelector('nav > div').classList.remove('navbar-scroll');
+        header.querySelectorAll('a, span, button').forEach(function(element) {
+          element.classList.remove('text-gray-700', 'hover:text-indigo-600');
+          element.classList.add('text-white', 'hover:text-indigo-200');
+        });
+      }
+    });
+
+    // Add event listeners for mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.add('active');
+    });
+
+    document.getElementById('close-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('active');
+    });
+  </script>
+</body>
+</html>
